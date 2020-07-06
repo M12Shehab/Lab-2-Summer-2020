@@ -27,7 +27,16 @@ int main()
 
     for (int i = 0; i < SIZE; i++)
     {
-        cout << "Point ["<<i<<"] ("<<arr[i].get_x()<<" , "<<arr[i].get_y()<<").\n";
+        for (int j = 0; j < SIZE; j++)
+        {
+            cout << "The distance between "<<i<< " and "<<j<<" = "<<arr[i].get_distance(arr[j]);
+            cout << endl;
+        }
+    }
+
+    for (int i = 0; i < SIZE; i++)
+    {
+        cout << "Point [" << i << "] (" << arr[i].get_x() << " , " << arr[i].get_y() << ").\n";
     }
 
 }

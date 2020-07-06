@@ -43,8 +43,8 @@ int Point::get_y()
 int Point::get_distance(Point p)
 {
 	
-	int x1 = this->x - p.get_x(); //calculating number to square in next step
-	int y1 = this->y - p.get_y();
+	int x1 = x - p.get_x(); //calculating number to square in next step
+	int y1 = y - p.get_y();
 	int dist;
 
 	dist = pow(x1, 2) + pow(y1, 2);       //calculating Euclidean distance
