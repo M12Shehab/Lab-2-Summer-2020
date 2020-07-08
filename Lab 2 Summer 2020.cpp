@@ -8,10 +8,19 @@ using namespace std;
 int main()
 {
     int SIZE = 0;
-    cout << "Enter how many points you want to create : ";
-    cin >> SIZE;
+    do
+    {
+        cout << "Enter how many points you want to create : ";
+        cin >> SIZE;
+        if (SIZE < 0)
+        {
+            cout << "-Error: please enter positive valuse.\nTry again.\n";
+        }
+    } 
+    while (SIZE < 0);
 
-    Point* arr = new Point[SIZE];
+
+    Point* arr = new Point[SIZE]; // Dynmaic memory 
     
     for (int i = 0; i < SIZE; i++)
     {
@@ -29,15 +38,16 @@ int main()
     {
         for (int j = 0; j < SIZE; j++)
         {
+            // Inner loop
             cout << "The distance between "<<i<< " and "<<j<<" = "<<arr[i].get_distance(arr[j]);
             cout << endl;
-        }
+        }// End inner loop
     }
 
-    for (int i = 0; i < SIZE; i++)
+    /*for (int i = 0; i < SIZE; i++)
     {
         cout << "Point [" << i << "] (" << arr[i].get_x() << " , " << arr[i].get_y() << ").\n";
-    }
+    }*/
 
 }
 

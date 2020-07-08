@@ -40,7 +40,8 @@ int Point::get_y()
 	return y;
 }
 
-int Point::get_distance(Point p)
+//int Point::get_distance(Point p) //temp object in memory.
+int Point::get_distance(Point &p)
 {
 	
 	int x1 = x - p.get_x(); //calculating number to square in next step
